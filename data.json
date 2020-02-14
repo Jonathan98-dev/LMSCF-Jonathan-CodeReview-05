@@ -1,0 +1,42 @@
+
+
+var movies = [
+
+		{
+			"name":"Avengers Endgame",
+			"desc":"Description 1",
+			"image":"img/avengers.png"
+		},
+
+		{
+			"name":"Blade Runner 2049",
+			"desc":"Description 2",
+			"image":"img/blade.png"
+		},
+
+		{
+			"name":"Glass",
+			"desc":"Description 3",
+			"image":"img/glass.png"
+		},
+
+		{
+			"name":"John Wick",
+			"desc":"Description 4",
+			"image":"img/john.png"
+		},
+
+		{
+			"name":"Jumanji",
+			"desc":"Description 5",
+			"image":"img/jumanji.png" 
+		},
+
+		{
+			"name":"Prisoners",
+			"desc":"Description 6",
+			"image":"img/prisoners.png"
+		},
+
+
+	]

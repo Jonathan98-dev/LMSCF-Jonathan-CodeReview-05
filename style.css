@@ -1,0 +1,24 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+.blackbg {
+  background-color: #000000; }
+
+.graybg {
+  background-color: #454545; }
+
+.mainbg {
+  background-color: #1D2329; }
+
+.moviebg {
+  background-color: #181818; }
+
+.buttonbg {
+  background-color: #32A23D; }
+
+.rotate {
+  transform: rotate(180deg); }
+
+/*# sourceMappingURL=style.css.map */
