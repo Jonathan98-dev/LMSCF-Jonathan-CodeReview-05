@@ -1,56 +1,70 @@
-$(document).ready(function() {
+$(document).ready(function() 
+{
 
-// for getting movies in html
-
+	// for getting movies in html
+	
     console.log(movies.length)
-
 
     for(i=0; i< movies.length; i++)
     {
-    	$("#movieContainer").append("<div class = 'moviebg text-light col-sm-12 col-md-5 d-lg-flex h-50 m-3'><img class  ='align-self-center m-3 border border-light rounded' src='"+movies[i].image+"' alt='movie'><div class = 'align-self-center'><div class = 'h3'>"+movies[i].name+"</div><div class = 'h6 font-weight-light my-3'>"+movies[i].desc+"</div><div class = 'd-flex'><div class='btn-group h-50 align-self-center pr-3' role='group' aria-label='Basic example'><button id = 'dislikebtn"+[i]+"' type='button' class='dislikebuttonpush btn btn-danger bg-danger'><img src='img/like.png' alt='like' class = 'w-75'></button><button id = 'likebtn"+[i]+"' type='button' class='likebuttonpush btn btn-success buttonbg '><img src='img/like.png' alt='movie' class = 'w-75 rotate'></button></div><span id ='counter"+[i]+"' class='bg-success h1 px-4 py-2 rounded-circle'>0</span></div></div></div>')")
+    	$("#movieContainer").append("<div id = 'go"+[i]+"' class = 'moviebg text-light col-sm-12 col-md-5 d-lg-flex h-50 m-3'><img class  ='align-self-center m-3 border border-light rounded' src='"+movies[i].image+"' alt='movie'><div class = 'align-self-center'><div class = 'h3'>"+movies[i].name+"</div><div class = 'h6 font-weight-light my-3'>"+movies[i].desc+"</div><div class = 'd-flex'><div class='btn-group h-50 align-self-center pr-3' role='group' aria-label='Basic example'><button id = 'dislikebtn"+[i]+"' type='button' class='dislikebuttonpush btn btn-danger bg-danger'><img src='img/like.png' alt='like' class = 'w-75'></button><button id = 'likebtn"+[i]+"' type='button' class='likebuttonpush btn btn-success buttonbg '><img src='img/like.png' alt='movie' class = 'w-75 rotate'></button></div><span id ='counter"+[i]+"' class='bg-success h1 px-4 py-2 rounded-circle'>"+Math.floor((Math.random()*10)-(Math.random()*10))+"</span></div></div></div>')")
 
-    	console.log("")
+    	var cou = $("#counter"+[i]+"").html()
+    	
+    	if(cou < 1)
+    	{
+    		console.log(cou) 
+    		$("#counter"+[i]+"").removeClass("bg-success").addClass("bg-danger")
+    	}
+    	
     }
 
+    //for sorting
+
+    $("#sortthis").on("click", function(){
+    	console.log("sort does not work yet")
+    	
+
+
+
+    })
+
   
-//for like and dislike buttons
+	//for like and dislike buttons
 
 	//template
 
-    $("#likebt").on("click", function(){
-    	console.log("click")
-    	var counter = Number($("#likecounter").html())
-    	counter++;
-    	console.log(counter)
-    	$("#likecounter").html(counter)
+    // $("#likebt").on("click", function(){
+    // 	console.log("click")
+    // 	var counter = Number($("#likecounter").html())
+    // 	counter++;
+    // 	console.log(counter)
+    // 	$("#likecounter").html(counter)
 
-    	if(counter < 1)
-    	{
-    		$("#likecounter").removeClass("bg-success").addClass("bg-danger")
-    	}else
-    	{
-    		$("#likecounter").removeClass("bg-danger").addClass("bg-success")
-    	}
-    })
+    // 	if(counter < 1)
+    // 	{
+    // 		$("#likecounter").removeClass("bg-success").addClass("bg-danger")
+    // 	}else
+    // 	{
+    // 		$("#likecounter").removeClass("bg-danger").addClass("bg-success")
+    // 	}
+    // })
 
-    $("#dislikebt").on("click", function(){
-    	console.log("click")
-    	var counterdis = Number($("#likecounter").html())
-    	counterdis--;
-    	console.log(counterdis)
-    	$("#likecounter").html(counterdis)
+    // $("#dislikebt").on("click", function(){
+    // 	console.log("click")
+    // 	var counterdis = Number($("#likecounter").html())
+    // 	counterdis--;
+    // 	console.log(counterdis)
+    // 	$("#likecounter").html(counterdis)
 
-    	if(counterdis < 1)
-    	{
-    		$("#likecounter").removeClass("bg-success").addClass("bg-danger")
-    	}else
-    	{
-    		$("#likecounter").removeClass("bg-danger").addClass("bg-success")
-    	}
-    })
-
-
-
+    // 	if(counterdis < 1)
+    // 	{
+    // 		$("#likecounter").removeClass("bg-success").addClass("bg-danger")
+    // 	}else
+    // 	{
+    // 		$("#likecounter").removeClass("bg-danger").addClass("bg-success")
+    // 	}
+    // })
 
 
     // real
@@ -383,7 +397,11 @@ $(document).ready(function() {
 
 
 
-		})
+		});
+
+
 
 
 });
+
+
